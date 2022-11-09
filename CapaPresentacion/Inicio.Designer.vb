@@ -43,11 +43,11 @@ Partial Class Inicio
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label6.Location = New System.Drawing.Point(507, 559)
+        Me.Label6.Location = New System.Drawing.Point(540, 559)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(184, 30)
+        Me.Label6.Size = New System.Drawing.Size(128, 30)
         Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Informacion Curso"
+        Me.Label6.Text = "Proovedores"
         '
         'Label5
         '
