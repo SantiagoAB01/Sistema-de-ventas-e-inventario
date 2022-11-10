@@ -32,6 +32,7 @@ Partial Class Inventario
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btn_Export = New System.Windows.Forms.Button()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Panel2.SuspendLayout()
         CType(Me.dgv_inventario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -39,6 +40,7 @@ Partial Class Inventario
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel2.Controls.Add(Me.IconButton1)
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
@@ -148,6 +150,19 @@ Partial Class Inventario
         Me.btn_Export.Size = New System.Drawing.Size(50, 46)
         Me.btn_Export.TabIndex = 28
         Me.btn_Export.UseVisualStyleBackColor = False
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.SteelBlue
+        Me.IconButton1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftLong
+        Me.IconButton1.IconColor = System.Drawing.Color.White
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(15, 3)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(50, 39)
+        Me.IconButton1.TabIndex = 29
+        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'Inventario
         '

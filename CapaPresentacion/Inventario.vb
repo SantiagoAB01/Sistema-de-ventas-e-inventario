@@ -2,10 +2,7 @@
 Imports ClosedXML.Excel
 
 Public Class Inventario
-    Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
-        Inicio.Show()
-        Me.Hide()
-    End Sub
+
 
     Private Sub txb_buscar_TextChanged(sender As Object, e As EventArgs) Handles txb_buscar.TextChanged
         Dim vista As New DataView(CapaDatos.MetodosIngreso.Listar_Inventario)
@@ -34,5 +31,10 @@ Public Class Inventario
                 End Try
             End If
         End Using
+    End Sub
+
+    Private Sub IconButton1_Click_1(sender As Object, e As EventArgs) Handles IconButton1.Click
+        Inicio.Show()
+        Me.Hide()
     End Sub
 End Class
