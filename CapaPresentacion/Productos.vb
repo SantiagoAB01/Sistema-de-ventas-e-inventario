@@ -32,4 +32,6 @@ Public Class Productos
         tbx_codigo.Text = ""
 
     End Sub
+
+
 End Class

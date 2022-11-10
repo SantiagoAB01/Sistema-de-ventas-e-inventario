@@ -30,6 +30,8 @@ Partial Class Clientes
         Me.btn_new = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.txb_buscar = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -84,10 +86,10 @@ Partial Class Clientes
         'dgv_clientes
         '
         Me.dgv_clientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_clientes.Location = New System.Drawing.Point(163, 109)
+        Me.dgv_clientes.Location = New System.Drawing.Point(40, 206)
         Me.dgv_clientes.Name = "dgv_clientes"
         Me.dgv_clientes.RowTemplate.Height = 25
-        Me.dgv_clientes.Size = New System.Drawing.Size(739, 463)
+        Me.dgv_clientes.Size = New System.Drawing.Size(963, 463)
         Me.dgv_clientes.TabIndex = 10
         '
         'btn_new
@@ -96,7 +98,7 @@ Partial Class Clientes
         Me.btn_new.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_new.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_new.ForeColor = System.Drawing.SystemColors.Window
-        Me.btn_new.Location = New System.Drawing.Point(12, 192)
+        Me.btn_new.Location = New System.Drawing.Point(286, 151)
         Me.btn_new.Name = "btn_new"
         Me.btn_new.Size = New System.Drawing.Size(125, 40)
         Me.btn_new.TabIndex = 12
@@ -109,7 +111,7 @@ Partial Class Clientes
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button1.ForeColor = System.Drawing.SystemColors.Window
-        Me.Button1.Location = New System.Drawing.Point(12, 256)
+        Me.Button1.Location = New System.Drawing.Point(437, 151)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(125, 40)
         Me.Button1.TabIndex = 13
@@ -122,18 +124,39 @@ Partial Class Clientes
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.SystemColors.Window
-        Me.Button2.Location = New System.Drawing.Point(12, 317)
+        Me.Button2.Location = New System.Drawing.Point(586, 151)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 40)
         Me.Button2.TabIndex = 14
         Me.Button2.Text = "Borrar"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'txb_buscar
+        '
+        Me.txb_buscar.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_buscar.Location = New System.Drawing.Point(40, 159)
+        Me.txb_buscar.Name = "txb_buscar"
+        Me.txb_buscar.Size = New System.Drawing.Size(217, 29)
+        Me.txb_buscar.TabIndex = 15
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label1.Location = New System.Drawing.Point(40, 131)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(71, 25)
+        Me.Label1.TabIndex = 16
+        Me.Label1.Text = "Buscar"
+        '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txb_buscar)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_new)
@@ -146,6 +169,7 @@ Partial Class Clientes
         Me.Panel2.PerformLayout()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -157,4 +181,6 @@ Partial Class Clientes
     Friend WithEvents btn_new As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents txb_buscar As TextBox
+    Friend WithEvents Label1 As Label
 End Class

@@ -6,7 +6,9 @@ Public Class Inventario
     End Sub
 
     Private Sub txb_buscar_TextChanged(sender As Object, e As EventArgs) Handles txb_buscar.TextChanged
-
+        Dim vista As New DataView(CapaDatos.MetodosIngreso.Listar_Inventario)
+        vista.RowFilter = "[Nombre Producto] like '" & txb_buscar.Text & "%'"
+        dgv_inventario.DataSource = vista
     End Sub
 
     Private Sub Inventario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
