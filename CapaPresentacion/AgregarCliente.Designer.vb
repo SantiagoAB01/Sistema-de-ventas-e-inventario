@@ -22,33 +22,33 @@ Partial Class AgregarCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txb_nombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txb_apellido = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txb_cedula = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txb_direccion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txb_email = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.txb_telefono = New System.Windows.Forms.TextBox()
+        Me.dat_fecha = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbx_sexo = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btn_cancelar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'txb_nombre
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(194, 70)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(166, 23)
-        Me.TextBox1.TabIndex = 0
+        Me.txb_nombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_nombre.Location = New System.Drawing.Point(194, 70)
+        Me.txb_nombre.Name = "txb_nombre"
+        Me.txb_nombre.Size = New System.Drawing.Size(166, 23)
+        Me.txb_nombre.TabIndex = 0
         '
         'Label1
         '
@@ -72,13 +72,13 @@ Partial Class AgregarCliente
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Apellido"
         '
-        'TextBox2
+        'txb_apellido
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox2.Location = New System.Drawing.Point(194, 120)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(166, 23)
-        Me.TextBox2.TabIndex = 2
+        Me.txb_apellido.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_apellido.Location = New System.Drawing.Point(194, 120)
+        Me.txb_apellido.Name = "txb_apellido"
+        Me.txb_apellido.Size = New System.Drawing.Size(166, 23)
+        Me.txb_apellido.TabIndex = 2
         '
         'Label3
         '
@@ -91,13 +91,13 @@ Partial Class AgregarCliente
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Cedula"
         '
-        'TextBox3
+        'txb_cedula
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox3.Location = New System.Drawing.Point(194, 171)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(166, 23)
-        Me.TextBox3.TabIndex = 4
+        Me.txb_cedula.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_cedula.Location = New System.Drawing.Point(194, 171)
+        Me.txb_cedula.Name = "txb_cedula"
+        Me.txb_cedula.Size = New System.Drawing.Size(166, 23)
+        Me.txb_cedula.TabIndex = 4
         '
         'Label4
         '
@@ -110,13 +110,13 @@ Partial Class AgregarCliente
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Direccion"
         '
-        'TextBox4
+        'txb_direccion
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox4.Location = New System.Drawing.Point(194, 221)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(166, 23)
-        Me.TextBox4.TabIndex = 6
+        Me.txb_direccion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_direccion.Location = New System.Drawing.Point(194, 221)
+        Me.txb_direccion.Name = "txb_direccion"
+        Me.txb_direccion.Size = New System.Drawing.Size(166, 23)
+        Me.txb_direccion.TabIndex = 6
         '
         'Label5
         '
@@ -129,13 +129,13 @@ Partial Class AgregarCliente
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "E-mail"
         '
-        'TextBox5
+        'txb_email
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox5.Location = New System.Drawing.Point(194, 271)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(166, 23)
-        Me.TextBox5.TabIndex = 8
+        Me.txb_email.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_email.Location = New System.Drawing.Point(194, 271)
+        Me.txb_email.Name = "txb_email"
+        Me.txb_email.Size = New System.Drawing.Size(166, 23)
+        Me.txb_email.TabIndex = 8
         '
         'Label6
         '
@@ -148,20 +148,20 @@ Partial Class AgregarCliente
         Me.Label6.TabIndex = 11
         Me.Label6.Text = "Telefono"
         '
-        'TextBox6
+        'txb_telefono
         '
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox6.Location = New System.Drawing.Point(194, 321)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(166, 23)
-        Me.TextBox6.TabIndex = 10
+        Me.txb_telefono.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_telefono.Location = New System.Drawing.Point(194, 321)
+        Me.txb_telefono.Name = "txb_telefono"
+        Me.txb_telefono.Size = New System.Drawing.Size(166, 23)
+        Me.txb_telefono.TabIndex = 10
         '
-        'DateTimePicker1
+        'dat_fecha
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(408, 67)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 23)
-        Me.DateTimePicker1.TabIndex = 12
+        Me.dat_fecha.Location = New System.Drawing.Point(408, 67)
+        Me.dat_fecha.Name = "dat_fecha"
+        Me.dat_fecha.Size = New System.Drawing.Size(200, 23)
+        Me.dat_fecha.TabIndex = 12
         '
         'Label7
         '
@@ -174,14 +174,14 @@ Partial Class AgregarCliente
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Fecha de Nacimiento"
         '
-        'ComboBox1
+        'cbx_sexo
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"F", "M"})
-        Me.ComboBox1.Location = New System.Drawing.Point(408, 120)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox1.TabIndex = 14
+        Me.cbx_sexo.FormattingEnabled = True
+        Me.cbx_sexo.Items.AddRange(New Object() {"F", "M"})
+        Me.cbx_sexo.Location = New System.Drawing.Point(408, 120)
+        Me.cbx_sexo.Name = "cbx_sexo"
+        Me.cbx_sexo.Size = New System.Drawing.Size(121, 23)
+        Me.cbx_sexo.TabIndex = 14
         '
         'Label8
         '
@@ -229,21 +229,21 @@ Partial Class AgregarCliente
         Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbx_sexo)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.dat_fecha)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.txb_telefono)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txb_email)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txb_direccion)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txb_cedula)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txb_apellido)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txb_nombre)
         Me.Name = "AgregarCliente"
         Me.Text = "Añadir Cliente"
         Me.ResumeLayout(False)
@@ -251,21 +251,21 @@ Partial Class AgregarCliente
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txb_nombre As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txb_apellido As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txb_cedula As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txb_direccion As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txb_email As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txb_telefono As TextBox
+    Friend WithEvents dat_fecha As DateTimePicker
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbx_sexo As ComboBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents btn_cancelar As Button
