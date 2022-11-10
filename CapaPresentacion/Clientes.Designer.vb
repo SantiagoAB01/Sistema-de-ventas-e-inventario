@@ -32,6 +32,7 @@ Partial Class Clientes
         Me.Button2 = New System.Windows.Forms.Button()
         Me.txb_buscar = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btn_Export = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.dgv_clientes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -150,11 +151,25 @@ Partial Class Clientes
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "Buscar"
         '
+        'btn_Export
+        '
+        Me.btn_Export.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn_Export.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.excel
+        Me.btn_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_Export.FlatAppearance.BorderSize = 0
+        Me.btn_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_Export.Location = New System.Drawing.Point(734, 151)
+        Me.btn_Export.Name = "btn_Export"
+        Me.btn_Export.Size = New System.Drawing.Size(50, 46)
+        Me.btn_Export.TabIndex = 27
+        Me.btn_Export.UseVisualStyleBackColor = False
+        '
         'Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.btn_Export)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txb_buscar)
         Me.Controls.Add(Me.Button2)
@@ -183,4 +198,5 @@ Partial Class Clientes
     Friend WithEvents Button2 As Button
     Friend WithEvents txb_buscar As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents btn_Export As Button
 End Class

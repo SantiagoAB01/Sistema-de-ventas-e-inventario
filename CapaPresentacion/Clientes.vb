@@ -1,4 +1,8 @@
-﻿Public Class Clientes
+﻿Imports ClosedXML.Excel
+Imports DocumentFormat.OpenXml.Spreadsheet
+Imports Microsoft.Office.Interop
+
+Public Class Clientes
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Inicio.Show()
         Me.Hide()
@@ -20,5 +24,28 @@
         If txb_buscar.Text = "" Then
             dgv_clientes.DataSource = CapaDatos.MetodosClientes.listarClientes
         End If
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btn_Export_Click(sender As Object, e As EventArgs) Handles btn_Export.Click
+
+        Using sfd As SaveFileDialog = New SaveFileDialog() With {.Filter = "Excel Workbook|*.xlsx"}
+            If sfd.ShowDialog() = DialogResult.OK Then
+                Try
+                    Using workbook As XLWorkbook = New XLWorkbook()
+
+                        workbook.Worksheets.Add(dgv_clientes.DataSource, "Clientes")
+                        workbook.SaveAs(sfd.FileName)
+                    End Using
+                    MessageBox.Show("Haz exportado tus datos a un archivo excel")
+                Catch ex As Exception
+                    MessageBox.Show("Ha habido un Error: " & ex.ToString)
+
+                End Try
+            End If
+        End Using
     End Sub
 End Class

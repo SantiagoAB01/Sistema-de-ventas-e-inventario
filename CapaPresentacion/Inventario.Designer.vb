@@ -23,7 +23,6 @@ Partial Class Inventario
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,6 +31,7 @@ Partial Class Inventario
         Me.btn_new = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_Export = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.dgv_inventario, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -39,26 +39,12 @@ Partial Class Inventario
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel2.Controls.Add(Me.IconButton1)
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1064, 45)
         Me.Panel2.TabIndex = 7
-        '
-        'IconButton1
-        '
-        Me.IconButton1.BackColor = System.Drawing.Color.SteelBlue
-        Me.IconButton1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftLong
-        Me.IconButton1.IconColor = System.Drawing.Color.White
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(12, 5)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(50, 39)
-        Me.IconButton1.TabIndex = 3
-        Me.IconButton1.UseVisualStyleBackColor = False
         '
         'Button3
         '
@@ -150,11 +136,25 @@ Partial Class Inventario
         Me.Button2.Text = "Borrar"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'btn_Export
+        '
+        Me.btn_Export.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn_Export.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.excel
+        Me.btn_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_Export.FlatAppearance.BorderSize = 0
+        Me.btn_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_Export.Location = New System.Drawing.Point(924, 148)
+        Me.btn_Export.Name = "btn_Export"
+        Me.btn_Export.Size = New System.Drawing.Size(50, 46)
+        Me.btn_Export.TabIndex = 28
+        Me.btn_Export.UseVisualStyleBackColor = False
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.btn_Export)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_new)
@@ -183,4 +183,5 @@ Partial Class Inventario
     Friend WithEvents btn_new As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents btn_Export As Button
 End Class
