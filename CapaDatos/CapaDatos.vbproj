@@ -102,6 +102,7 @@
     <Compile Include="MetodosCategoria.vb" />
     <Compile Include="MetodosClientes.vb" />
     <Compile Include="MetodosIngreso.vb" />
+    <Compile Include="MetodoTrabajador.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>

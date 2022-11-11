@@ -25,13 +25,14 @@ Partial Class Login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.PanelTitleBar = New System.Windows.Forms.Panel()
         Me.btnLogin = New FontAwesome.Sharp.IconButton()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -39,7 +40,7 @@ Partial Class Login
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(374, 230)
+        Me.PictureBox1.Location = New System.Drawing.Point(374, 184)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(262, 152)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -49,6 +50,7 @@ Partial Class Login
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
@@ -62,6 +64,24 @@ Partial Class Login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(704, 441)
         Me.Panel1.TabIndex = 5
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(94, 248)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(67, 15)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Contraseña"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(94, 184)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(47, 15)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Usuario"
         '
         'PanelTitleBar
         '
@@ -78,10 +98,10 @@ Partial Class Login
         Me.btnLogin.IconChar = FontAwesome.Sharp.IconChar.Users
         Me.btnLogin.IconColor = System.Drawing.Color.White
         Me.btnLogin.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.btnLogin.Location = New System.Drawing.Point(107, 333)
+        Me.btnLogin.Location = New System.Drawing.Point(214, 351)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Padding = New System.Windows.Forms.Padding(5)
-        Me.btnLogin.Size = New System.Drawing.Size(188, 63)
+        Me.btnLogin.Size = New System.Drawing.Size(167, 63)
         Me.btnLogin.TabIndex = 5
         Me.btnLogin.Text = "Login"
         Me.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -113,23 +133,15 @@ Partial Class Login
         Me.Label1.Text = "Bienvenido al sistema " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de inventario Macintosh!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label2
+        'Button1
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(94, 184)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 15)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Usuario"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(94, 248)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(67, 15)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Contraseña"
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(55, 351)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 61)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Registro"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Login
         '
@@ -156,4 +168,5 @@ End Sub
     Friend WithEvents PanelTitleBar As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents Button1 As Button
 End Class

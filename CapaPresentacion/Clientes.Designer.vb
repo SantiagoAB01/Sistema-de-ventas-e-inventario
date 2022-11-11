@@ -145,7 +145,7 @@ Partial Class Clientes
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(40, 131)
+        Me.Label1.Location = New System.Drawing.Point(44, 126)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 25)
         Me.Label1.TabIndex = 16
