@@ -215,8 +215,15 @@ Public Class Login
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Inicio.Show()
-        Me.Hide()
+
+        If CapaDatos.MetodoTrabajador.ValidarLogin(txb_cedula.Text, txb_password.Text) Then
+            Inicio.Show()
+            Me.Hide()
+        Else
+            MsgBox("Email o contraseña incorrectos!")
+        End If
+
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

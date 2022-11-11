@@ -25,14 +25,14 @@ Partial Class Login
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.tx = New System.Windows.Forms.Label()
         Me.PanelTitleBar = New System.Windows.Forms.Panel()
         Me.btnLogin = New FontAwesome.Sharp.IconButton()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txb_password = New System.Windows.Forms.TextBox()
+        Me.txb_cedula = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -52,18 +52,28 @@ Partial Class Login
         Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.tx)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.PanelTitleBar)
         Me.Panel1.Controls.Add(Me.btnLogin)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.TextBox1)
+        Me.Panel1.Controls.Add(Me.txb_password)
+        Me.Panel1.Controls.Add(Me.txb_cedula)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(704, 441)
         Me.Panel1.TabIndex = 5
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(55, 351)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(132, 61)
+        Me.Button1.TabIndex = 9
+        Me.Button1.Text = "Registro"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -74,14 +84,14 @@ Partial Class Login
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Contraseña"
         '
-        'Label2
+        'tx
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(94, 184)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 15)
-        Me.Label2.TabIndex = 7
-        Me.Label2.Text = "Usuario"
+        Me.tx.AutoSize = True
+        Me.tx.Location = New System.Drawing.Point(94, 184)
+        Me.tx.Name = "tx"
+        Me.tx.Size = New System.Drawing.Size(44, 15)
+        Me.tx.TabIndex = 7
+        Me.tx.Text = "Cedula"
         '
         'PanelTitleBar
         '
@@ -107,19 +117,19 @@ Partial Class Login
         Me.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnLogin.UseVisualStyleBackColor = False
         '
-        'TextBox2
+        'txb_password
         '
-        Me.TextBox2.Location = New System.Drawing.Point(94, 275)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(211, 23)
-        Me.TextBox2.TabIndex = 2
+        Me.txb_password.Location = New System.Drawing.Point(94, 275)
+        Me.txb_password.Name = "txb_password"
+        Me.txb_password.Size = New System.Drawing.Size(211, 23)
+        Me.txb_password.TabIndex = 2
         '
-        'TextBox1
+        'txb_cedula
         '
-        Me.TextBox1.Location = New System.Drawing.Point(94, 212)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(211, 23)
-        Me.TextBox1.TabIndex = 1
+        Me.txb_cedula.Location = New System.Drawing.Point(94, 212)
+        Me.txb_cedula.Name = "txb_cedula"
+        Me.txb_cedula.Size = New System.Drawing.Size(211, 23)
+        Me.txb_cedula.TabIndex = 1
         '
         'Label1
         '
@@ -132,16 +142,6 @@ Partial Class Login
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Bienvenido al sistema " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "de inventario Macintosh!" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(55, 351)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(132, 61)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Registro"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Login
         '
@@ -161,12 +161,12 @@ End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txb_password As TextBox
+    Friend WithEvents txb_cedula As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents btnLogin As FontAwesome.Sharp.IconButton
     Friend WithEvents PanelTitleBar As Panel
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents tx As Label
     Friend WithEvents Button1 As Button
 End Class

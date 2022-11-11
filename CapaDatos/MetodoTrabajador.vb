@@ -39,11 +39,23 @@ Public Class MetodoTrabajador
                 CMD.Parameters.AddWithValue("@password", password)
                 CN.Open()
                 CMD.ExecuteNonQuery()
-
-
-
-
             End Using
         End Using
     End Sub
+
+
+
+    Public Shared Function ValidarLogin(cedula As String, password As String) As String
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("ValidarLogin", CN)
+                CMD.CommandType = CommandType.StoredProcedure
+                CMD.Parameters.AddWithValue("@cedula", cedula)
+                CMD.Parameters.AddWithValue("@password", password)
+                CN.Open()
+                Return CMD.ExecuteReader().HasRows.ToString
+            End Using
+
+        End Using
+
+    End Function
 End Class
