@@ -38,10 +38,11 @@ Partial Class Productos
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.btn_vercodigo = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txb_buscar = New System.Windows.Forms.TextBox()
+        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.dgv_prouctos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -198,16 +199,36 @@ Partial Class Productos
         Me.btn_vercodigo.Text = "ver codigo"
         Me.btn_vercodigo.UseVisualStyleBackColor = True
         '
-        'Label10
+        'txb_buscar
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label10.Location = New System.Drawing.Point(102, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(104, 25)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Productos"
+        Me.txb_buscar.Location = New System.Drawing.Point(337, 108)
+        Me.txb_buscar.Name = "txb_buscar"
+        Me.txb_buscar.Size = New System.Drawing.Size(182, 23)
+        Me.txb_buscar.TabIndex = 25
+        '
+        'IconButton1
+        '
+        Me.IconButton1.BackColor = System.Drawing.Color.SteelBlue
+        Me.IconButton1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftLong
+        Me.IconButton1.IconColor = System.Drawing.Color.White
+        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton1.Location = New System.Drawing.Point(13, 3)
+        Me.IconButton1.Name = "IconButton1"
+        Me.IconButton1.Size = New System.Drawing.Size(50, 39)
+        Me.IconButton1.TabIndex = 26
+        Me.IconButton1.UseVisualStyleBackColor = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel2.Controls.Add(Me.IconButton1)
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Location = New System.Drawing.Point(1, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1064, 45)
+        Me.Panel2.TabIndex = 30
         '
         'Button3
         '
@@ -221,28 +242,23 @@ Partial Class Productos
         Me.Button3.TabIndex = 2
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Panel2
+        'Label10
         '
-        Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Location = New System.Drawing.Point(0, 1)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1064, 45)
-        Me.Panel2.TabIndex = 7
-        '
-        'txb_buscar
-        '
-        Me.txb_buscar.Location = New System.Drawing.Point(337, 108)
-        Me.txb_buscar.Name = "txb_buscar"
-        Me.txb_buscar.Size = New System.Drawing.Size(182, 23)
-        Me.txb_buscar.TabIndex = 25
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label10.Location = New System.Drawing.Point(102, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(104, 25)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Productos"
         '
         'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.txb_buscar)
         Me.Controls.Add(Me.btn_vercodigo)
         Me.Controls.Add(Me.Button2)
@@ -260,7 +276,6 @@ Partial Class Productos
         Me.Controls.Add(Me.txb_nombre)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Panel2)
         Me.Name = "Productos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Informacion del programa"
@@ -288,8 +303,8 @@ Partial Class Productos
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents btn_vercodigo As Button
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents txb_buscar As TextBox
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Label10 As Label
 End Class

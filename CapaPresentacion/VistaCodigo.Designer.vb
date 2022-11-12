@@ -24,6 +24,7 @@ Partial Class VistaCodigo
     Private Sub InitializeComponent()
         Me.img_codigo = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.img_codigo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -36,7 +37,7 @@ Partial Class VistaCodigo
         Me.img_codigo.ImageLocation = ""
         Me.img_codigo.Location = New System.Drawing.Point(8, 61)
         Me.img_codigo.Name = "img_codigo"
-        Me.img_codigo.Size = New System.Drawing.Size(319, 121)
+        Me.img_codigo.Size = New System.Drawing.Size(319, 118)
         Me.img_codigo.TabIndex = 0
         Me.img_codigo.TabStop = False
         '
@@ -51,12 +52,26 @@ Partial Class VistaCodigo
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "CODIGO DE BARRAS"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.ForeColor = System.Drawing.Color.Snow
+        Me.Button1.Location = New System.Drawing.Point(75, 185)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(176, 39)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Confirmar"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'VistaCodigo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(347, 211)
+        Me.ClientSize = New System.Drawing.Size(347, 228)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.img_codigo)
         Me.Name = "VistaCodigo"
@@ -69,4 +84,5 @@ Partial Class VistaCodigo
 
     Friend WithEvents img_codigo As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class

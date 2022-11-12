@@ -36,6 +36,7 @@ Partial Class Inicio
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
         '
         'Label6
@@ -45,9 +46,9 @@ Partial Class Inicio
         Me.Label6.ForeColor = System.Drawing.SystemColors.Window
         Me.Label6.Location = New System.Drawing.Point(540, 559)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(128, 30)
+        Me.Label6.Size = New System.Drawing.Size(127, 30)
         Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Proovedores"
+        Me.Label6.Text = "Proveedores"
         '
         'Label5
         '
@@ -242,4 +243,5 @@ End Sub
     Friend WithEvents Button7 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label7 As Label
+    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
 End Class
