@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Productos
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,19 +20,15 @@ Partial Class Productos
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txb_nombre = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Nombre = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txb_descripcion = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cbx_categoria = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -41,56 +37,14 @@ Partial Class Productos
         Me.dgv_prouctos = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel2.SuspendLayout()
+        Me.btn_vercodigo = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txb_buscar = New System.Windows.Forms.TextBox()
         CType(Me.dgv_prouctos, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel2.Controls.Add(Me.IconButton1)
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.Label10)
-        Me.Panel2.Location = New System.Drawing.Point(0, 1)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1064, 45)
-        Me.Panel2.TabIndex = 7
-        '
-        'IconButton1
-        '
-        Me.IconButton1.BackColor = System.Drawing.Color.SteelBlue
-        Me.IconButton1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftLong
-        Me.IconButton1.IconColor = System.Drawing.Color.White
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(12, 3)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(50, 39)
-        Me.IconButton1.TabIndex = 3
-        Me.IconButton1.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.icone_cercle_rempli_gris
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Location = New System.Drawing.Point(1017, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(35, 36)
-        Me.Button3.TabIndex = 2
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label10.Location = New System.Drawing.Point(102, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(104, 25)
-        Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Productos"
         '
         'Label1
         '
@@ -114,12 +68,12 @@ Partial Class Productos
         Me.Label2.TabIndex = 9
         Me.Label2.Text = "LISTA DE PRODUCTOS"
         '
-        'TextBox1
+        'txb_nombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(31, 164)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(223, 23)
-        Me.TextBox1.TabIndex = 10
+        Me.txb_nombre.Location = New System.Drawing.Point(31, 164)
+        Me.txb_nombre.Name = "txb_nombre"
+        Me.txb_nombre.Size = New System.Drawing.Size(223, 23)
+        Me.txb_nombre.TabIndex = 10
         '
         'Panel1
         '
@@ -149,13 +103,13 @@ Partial Class Productos
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Descripción : "
         '
-        'TextBox2
+        'txb_descripcion
         '
-        Me.TextBox2.Location = New System.Drawing.Point(31, 235)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(223, 147)
-        Me.TextBox2.TabIndex = 13
+        Me.txb_descripcion.Location = New System.Drawing.Point(31, 235)
+        Me.txb_descripcion.Multiline = True
+        Me.txb_descripcion.Name = "txb_descripcion"
+        Me.txb_descripcion.Size = New System.Drawing.Size(223, 147)
+        Me.txb_descripcion.TabIndex = 13
         '
         'Label4
         '
@@ -195,12 +149,15 @@ Partial Class Productos
         '
         'btn_codigo
         '
+        Me.btn_codigo.BackColor = System.Drawing.Color.SteelBlue
+        Me.btn_codigo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btn_codigo.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.btn_codigo.Location = New System.Drawing.Point(146, 491)
         Me.btn_codigo.Name = "btn_codigo"
         Me.btn_codigo.Size = New System.Drawing.Size(108, 47)
         Me.btn_codigo.TabIndex = 20
         Me.btn_codigo.Text = "Generar" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Codigo"
-        Me.btn_codigo.UseVisualStyleBackColor = True
+        Me.btn_codigo.UseVisualStyleBackColor = False
         '
         'dgv_prouctos
         '
@@ -222,18 +179,72 @@ Partial Class Productos
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.SeaGreen
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button2.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.Button2.Location = New System.Drawing.Point(156, 617)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(108, 47)
         Me.Button2.TabIndex = 23
         Me.Button2.Text = "AGREGAR"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'btn_vercodigo
+        '
+        Me.btn_vercodigo.Location = New System.Drawing.Point(46, 550)
+        Me.btn_vercodigo.Name = "btn_vercodigo"
+        Me.btn_vercodigo.Size = New System.Drawing.Size(75, 23)
+        Me.btn_vercodigo.TabIndex = 24
+        Me.btn_vercodigo.Text = "ver codigo"
+        Me.btn_vercodigo.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label10.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label10.Location = New System.Drawing.Point(102, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(104, 25)
+        Me.Label10.TabIndex = 0
+        Me.Label10.Text = "Productos"
+        '
+        'Button3
+        '
+        Me.Button3.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.icone_cercle_rempli_gris
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Location = New System.Drawing.Point(1017, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(35, 36)
+        Me.Button3.TabIndex = 2
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel2.Controls.Add(Me.Button3)
+        Me.Panel2.Controls.Add(Me.Label10)
+        Me.Panel2.Location = New System.Drawing.Point(0, 1)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1064, 45)
+        Me.Panel2.TabIndex = 7
+        '
+        'txb_buscar
+        '
+        Me.txb_buscar.Location = New System.Drawing.Point(337, 108)
+        Me.txb_buscar.Name = "txb_buscar"
+        Me.txb_buscar.Size = New System.Drawing.Size(182, 23)
+        Me.txb_buscar.TabIndex = 25
         '
         'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.txb_buscar)
+        Me.Controls.Add(Me.btn_vercodigo)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgv_prouctos)
@@ -243,35 +254,31 @@ Partial Class Productos
         Me.Controls.Add(Me.cbx_categoria)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txb_descripcion)
         Me.Controls.Add(Me.Nombre)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txb_nombre)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "Productos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Informacion del programa"
+        CType(Me.dgv_prouctos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.dgv_prouctos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Panel2 As Panel
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Label10 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txb_nombre As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Nombre As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txb_descripcion As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents cbx_categoria As ComboBox
     Friend WithEvents Label5 As Label
@@ -280,4 +287,9 @@ Partial Class Productos
     Friend WithEvents dgv_prouctos As DataGridView
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents btn_vercodigo As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents txb_buscar As TextBox
 End Class

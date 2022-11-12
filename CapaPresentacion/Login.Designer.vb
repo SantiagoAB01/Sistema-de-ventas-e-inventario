@@ -121,6 +121,8 @@ Partial Class Login
         '
         Me.txb_password.Location = New System.Drawing.Point(94, 275)
         Me.txb_password.Name = "txb_password"
+        Me.txb_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txb_password.PlaceholderText = "*******"
         Me.txb_password.Size = New System.Drawing.Size(211, 23)
         Me.txb_password.TabIndex = 2
         '
@@ -128,6 +130,7 @@ Partial Class Login
         '
         Me.txb_cedula.Location = New System.Drawing.Point(94, 212)
         Me.txb_cedula.Name = "txb_cedula"
+        Me.txb_cedula.PlaceholderText = "0-000-000"
         Me.txb_cedula.Size = New System.Drawing.Size(211, 23)
         Me.txb_cedula.TabIndex = 1
         '

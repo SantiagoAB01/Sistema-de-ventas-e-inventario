@@ -283,6 +283,7 @@ Partial Class Registro
         Me.txb_password.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txb_password.Location = New System.Drawing.Point(54, 306)
         Me.txb_password.Name = "txb_password"
+        Me.txb_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txb_password.Size = New System.Drawing.Size(274, 29)
         Me.txb_password.TabIndex = 22
         '
