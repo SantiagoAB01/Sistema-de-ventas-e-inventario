@@ -162,9 +162,12 @@ Partial Class Productos
         '
         'dgv_prouctos
         '
+        Me.dgv_prouctos.AllowUserToAddRows = False
         Me.dgv_prouctos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_prouctos.Location = New System.Drawing.Point(338, 137)
+        Me.dgv_prouctos.MultiSelect = False
         Me.dgv_prouctos.Name = "dgv_prouctos"
+        Me.dgv_prouctos.ReadOnly = True
         Me.dgv_prouctos.RowTemplate.Height = 25
         Me.dgv_prouctos.Size = New System.Drawing.Size(692, 527)
         Me.dgv_prouctos.TabIndex = 21

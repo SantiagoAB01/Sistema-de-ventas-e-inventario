@@ -38,4 +38,16 @@ Public Class MetodosProveedor
         End Using
 
     End Function
+
+
+    Public Shared Function ListarProveedores_Inventario() As DataTable
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using DA As New SqlDataAdapter("ListarProveedores_Inventario", CN)
+                Using Tabla As New DataTable
+                    DA.Fill(Tabla)
+                    Return Tabla
+                End Using
+            End Using
+        End Using
+    End Function
 End Class

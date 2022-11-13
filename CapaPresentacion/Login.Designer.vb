@@ -67,13 +67,14 @@ Partial Class Login
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.Silver
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button1.Location = New System.Drawing.Point(55, 351)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(132, 61)
         Me.Button1.TabIndex = 9
         Me.Button1.Text = "Registro"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Label3
         '
