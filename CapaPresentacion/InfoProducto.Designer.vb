@@ -38,6 +38,10 @@ Partial Class InfoProducto
         Me.btn_reset = New System.Windows.Forms.Button()
         Me.btn_cancelar = New System.Windows.Forms.Button()
         Me.txb_id = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txb_preciocompra = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txb_precioventa = New System.Windows.Forms.TextBox()
         CType(Me.img_codigo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -104,7 +108,7 @@ Partial Class InfoProducto
         Me.txb_descripcion.Location = New System.Drawing.Point(32, 176)
         Me.txb_descripcion.Multiline = True
         Me.txb_descripcion.Name = "txb_descripcion"
-        Me.txb_descripcion.Size = New System.Drawing.Size(223, 147)
+        Me.txb_descripcion.Size = New System.Drawing.Size(223, 92)
         Me.txb_descripcion.TabIndex = 28
         '
         'Nombre
@@ -199,6 +203,40 @@ Partial Class InfoProducto
         Me.txb_id.TabIndex = 48
         Me.txb_id.Visible = False
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.Location = New System.Drawing.Point(165, 282)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(110, 19)
+        Me.Label7.TabIndex = 52
+        Me.Label7.Text = "Precio Compra"
+        '
+        'txb_preciocompra
+        '
+        Me.txb_preciocompra.Location = New System.Drawing.Point(165, 309)
+        Me.txb_preciocompra.Name = "txb_preciocompra"
+        Me.txb_preciocompra.Size = New System.Drawing.Size(90, 23)
+        Me.txb_preciocompra.TabIndex = 51
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.Location = New System.Drawing.Point(32, 282)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(93, 19)
+        Me.Label6.TabIndex = 50
+        Me.Label6.Text = "Precio Venta"
+        '
+        'txb_precioventa
+        '
+        Me.txb_precioventa.Location = New System.Drawing.Point(32, 309)
+        Me.txb_precioventa.Name = "txb_precioventa"
+        Me.txb_precioventa.Size = New System.Drawing.Size(90, 23)
+        Me.txb_precioventa.TabIndex = 49
+        '
         'InfoProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -206,6 +244,10 @@ Partial Class InfoProducto
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(580, 450)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.txb_preciocompra)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.txb_precioventa)
         Me.Controls.Add(Me.txb_id)
         Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.btn_reset)
@@ -245,4 +287,8 @@ Partial Class InfoProducto
     Friend WithEvents btn_reset As Button
     Friend WithEvents btn_cancelar As Button
     Friend WithEvents txb_id As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txb_preciocompra As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txb_precioventa As TextBox
 End Class

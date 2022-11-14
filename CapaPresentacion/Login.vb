@@ -4,6 +4,7 @@ Imports System.Runtime.InteropServices
 Public Class Login
 
     'Campos
+
     Private borderRadius As Integer = 20
     Private borderSize As Integer = 5
     Private borderColor As Color = Color.Green

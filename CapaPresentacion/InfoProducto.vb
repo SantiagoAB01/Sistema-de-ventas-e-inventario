@@ -31,7 +31,7 @@ Public Class InfoProducto
 
             img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
             Dim PicByte As Byte() = picStream.ToArray
-            CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte)
+            CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text))
         Catch ex As Exception
             MsgBox("Error : " & ex.ToString)
         End Try

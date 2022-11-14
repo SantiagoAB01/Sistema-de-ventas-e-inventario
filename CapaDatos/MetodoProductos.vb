@@ -15,7 +15,7 @@ Public Class MetodoProductos
 
     End Function
 
-    Public Shared Sub InsertarProducto(id_categoria As String, codigo As String, nombre As String, descripcion As String, imagen As Byte())
+    Public Shared Sub InsertarProducto(id_categoria As String, codigo As String, nombre As String, descripcion As String, imagen As Byte(), precio_Venta As Double, precio_compra As Double)
         Using CN As New SqlConnection(My.Settings.Conexion)
             Using CMD As New SqlCommand("InsertarProducto", CN)
                 CMD.CommandType = CommandType.StoredProcedure
@@ -24,6 +24,8 @@ Public Class MetodoProductos
                 CMD.Parameters.AddWithValue("@nombre", nombre)
                 CMD.Parameters.AddWithValue("@descripcion", descripcion)
                 CMD.Parameters.AddWithValue("@imagen", imagen)
+                CMD.Parameters.AddWithValue("@Precio_venta", precio_Venta)
+                CMD.Parameters.AddWithValue("@Precio_compra", precio_compra)
 
                 CN.Open()
                 CMD.ExecuteNonQuery()
@@ -31,7 +33,7 @@ Public Class MetodoProductos
         End Using
     End Sub
 
-    Public Shared Sub ActualizarProducto(id_producto As Integer, id_categoria As String, codigo As String, nombre As String, descripcion As String, imagen As Byte())
+    Public Shared Sub ActualizarProducto(id_producto As Integer, id_categoria As String, codigo As String, nombre As String, descripcion As String, imagen As Byte(), precio_Venta As Double, precio_compra As Double)
         Using CN As New SqlConnection(My.Settings.Conexion)
             Using CMD As New SqlCommand("ActualizarProducto", CN)
                 CMD.CommandType = CommandType.StoredProcedure
@@ -41,7 +43,8 @@ Public Class MetodoProductos
                 CMD.Parameters.AddWithValue("@nombre", nombre)
                 CMD.Parameters.AddWithValue("@descripcion", descripcion)
                 CMD.Parameters.AddWithValue("@imagen", imagen)
-
+                CMD.Parameters.AddWithValue("@Precio_venta", precio_Venta)
+                CMD.Parameters.AddWithValue("@Precio_compra", precio_compra)
                 CN.Open()
                 CMD.ExecuteNonQuery()
             End Using

@@ -22,13 +22,11 @@ Partial Class Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -38,17 +36,6 @@ Partial Class Inicio
         Me.Label7 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.SuspendLayout()
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.ForeColor = System.Drawing.SystemColors.Window
-        Me.Label6.Location = New System.Drawing.Point(540, 559)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(127, 30)
-        Me.Label6.TabIndex = 23
-        Me.Label6.Text = "Proveedores"
         '
         'Label5
         '
@@ -104,18 +91,6 @@ Partial Class Inicio
         Me.Label1.Size = New System.Drawing.Size(144, 30)
         Me.Label1.TabIndex = 18
         Me.Label1.Text = "Facturar venta"
-        '
-        'Button6
-        '
-        Me.Button6.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.inventario
-        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Location = New System.Drawing.Point(514, 366)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(165, 165)
-        Me.Button6.TabIndex = 17
-        Me.Button6.UseVisualStyleBackColor = True
         '
         'Button5
         '
@@ -210,13 +185,11 @@ Partial Class Inicio
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -228,14 +201,11 @@ Partial Class Inicio
         Me.PerformLayout
 
 End Sub
-
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button

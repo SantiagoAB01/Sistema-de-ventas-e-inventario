@@ -5,6 +5,7 @@ Imports Microsoft.SqlServer.Server
 
 Public Class MetodoTrabajador
 
+    Public Shared Id_Trabajador As String
 
     Public Shared Function ValidarTrabajador(cedula As String) As String
         Using CN As New SqlConnection(My.Settings.Conexion)

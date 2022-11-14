@@ -4,10 +4,11 @@ Imports ClosedXML.Excel
 Public Class Inventario
 
     Dim id_producto As Integer = 0
+    Dim id_ingreso As Integer = 0
 
     Private Sub txb_buscar_TextChanged(sender As Object, e As EventArgs) Handles txb_buscar.TextChanged
         Dim vista As New DataView(CapaDatos.MetodosIngreso.Listar_Inventario)
-        vista.RowFilter = "[Nombre Producto] like '" & txb_buscar.Text & "%'"
+        vista.RowFilter = "nombre like '" & txb_buscar.Text & "%'"
         dgv_inventario.DataSource = vista
 
 
@@ -18,9 +19,7 @@ Public Class Inventario
         dgv_inventario.DataSource = CapaDatos.MetodosIngreso.Listar_Inventario
         dgv_productos.DataSource = CapaDatos.MetodoProductos.listarProductos
 
-        cbx_Proveedores.DisplayMember = "nombre"
-        cbx_Proveedores.ValueMember = "id_proveedor"
-        cbx_Proveedores.DataSource = CapaDatos.MetodosProveedor.ListarProveedores_Inventario
+
 
     End Sub
 
@@ -48,11 +47,20 @@ Public Class Inventario
         Panel_Registro.Visible = True
         lbl_titulo.Text = "Nuevo"
         dgv_inventario.Width = 514
-        Panel_Registro.BackColor = ColorTranslator.FromHtml("#BFCDDB")
+        btn_eliminar.Visible = False
+        btn_Agregar.Visible = True
+        Panel_Registro.BackColor = ColorTranslator.FromHtml("#BCDDB")
+        lbl_stockActual.Visible = False
+        btn_actualizar.Visible = False
+
+
+        id_ingreso = 0
+        txb_id_Producto.Text = ""
+        num_cantidad.Value = 0
     End Sub
 
     Private Sub btn_Cancelar_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
-        dgv_inventario.Width = 998
+        dgv_inventario.Width = 846
         Panel_Registro.Visible = False
     End Sub
 
@@ -72,15 +80,15 @@ Public Class Inventario
     End Sub
 
     Private Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
-        If MessageBox.Show("¿Esta Seguro de De realizar esta Accion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) Then
+        If MessageBox.Show("¿Esta Seguro de De realizar esta Accion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = 6 Then
 
             Dim fechaActual As Date = Date.Now
-            If CapaDatos.MetodosIngreso.RegistrarInventario(CInt(id_producto), cbx_Proveedores.SelectedValue, fechaActual.ToShortDateString, Convert.ToDouble(txb_PrecioCompra.Text), Convert.ToDouble(txb_PrecioVenta.Text), CInt(num_Cantidad.Value.ToString), dte_FechaProduccion.Value.ToLongDateString, dte_Vencimiento.Value.ToLongDateString) Then
+            If CapaDatos.MetodosIngreso.RegistrarInventario(CInt(id_producto), fechaActual.ToShortDateString, CInt(num_cantidad.Value.ToString)) Then
                 MsgBox("Parece que ya esta registrado este producto en el inventario")
 
             Else
                 MsgBox("Registro Exitso!")
-                End If
+            End If
 
         Else
             MsgBox("ha cancelado la operacion!")
@@ -97,5 +105,52 @@ Public Class Inventario
         lbl_titulo.Text = "Actualizar"
         dgv_inventario.Width = 514
         Panel_Registro.Visible = True
+        lbl_stockActual.Visible = True
+
+        btn_Agregar.Visible = False
+        btn_actualizar.Visible = True
+        btn_eliminar.Visible = True
+
+
+        id_ingreso = CInt(dgv_inventario.Rows(dgv_inventario.CurrentRow.Index).Cells(0).Value.ToString)
+        id_producto = dgv_inventario.Rows(dgv_inventario.CurrentRow.Index).Cells(1).Value
+        txb_id_Producto.Text = dgv_inventario.Rows(dgv_inventario.CurrentRow.Index).Cells(2).Value.ToString
+
+        num_cantidad.Value = CInt(dgv_inventario.Rows(dgv_inventario.CurrentRow.Index).Cells(3).Value.ToString)
+
+
+
+
+
+    End Sub
+
+    Private Sub btn_actualizar_Click(sender As Object, e As EventArgs) Handles btn_actualizar.Click
+        If MessageBox.Show("¿Esta Seguro de De realizar esta Accion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = 6 Then
+
+            Dim fechaActual As Date = Date.Now
+            If CapaDatos.MetodosIngreso.ActualizarInventario(id_ingreso, CInt(id_producto), fechaActual.ToShortDateString, CInt(num_cantidad.Value.ToString)) Then
+                MsgBox("Parece que ya esta registrado este producto en el inventario")
+
+            Else
+                MsgBox("Actualizacion Exitosa!")
+            End If
+
+        Else
+            MsgBox("ha cancelado la operacion!")
+        End If
+    End Sub
+
+    Private Sub btn_eliminar_Click(sender As Object, e As EventArgs) Handles btn_eliminar.Click
+        If MessageBox.Show("¿Esta Seguro de De realizar esta Accion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = 6 Then
+            Try
+                CapaDatos.MetodosIngreso.EliminarInventario(id_ingreso)
+            Catch ex As Exception
+
+            End Try
+
+            MsgBox("Ha Eliminado el registro")
+        Else
+            MsgBox("Ha cancelado La operación")
+        End If
     End Sub
 End Class

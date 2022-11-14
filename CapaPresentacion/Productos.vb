@@ -52,7 +52,7 @@ Public Class Productos
         VistaCodigo.img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
         Dim PicByte As Byte() = picStream.ToArray
 
-        CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte)
+        CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text))
         MsgBox("Registro Exitoso!")
     End Sub
 
@@ -87,6 +87,9 @@ Public Class Productos
         InfoProducto.txb_nombre.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(2).Value.ToString
         InfoProducto.txb_descripcion.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(3).Value.ToString
         InfoProducto.cbx_categoria.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(4).Value.ToString
+        InfoProducto.txb_precioventa.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(5).Value.ToString
+        InfoProducto.txb_preciocompra.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(6).Value.ToString
+
         Dim bm As Bitmap = Nothing
         bm = Codigo.codigo128("A" & InfoProducto.tbx_codigo.Text & "B", 70)
         If Not IsNothing(bm) Then
