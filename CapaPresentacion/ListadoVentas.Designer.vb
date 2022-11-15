@@ -26,10 +26,12 @@ Partial Class ListadoVentas
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv_ventas = New System.Windows.Forms.DataGridView()
+        Me.btn_Export = New System.Windows.Forms.Button()
+        Me.txb_buscar = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_ventas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel2
@@ -79,40 +81,63 @@ Partial Class ListadoVentas
         Me.Label10.TabIndex = 0
         Me.Label10.Text = "Lista de Ventas"
         '
-        'Label4
+        'dgv_ventas
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(75, 82)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(119, 30)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Mis Ventas"
+        Me.dgv_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_ventas.Location = New System.Drawing.Point(91, 142)
+        Me.dgv_ventas.Name = "dgv_ventas"
+        Me.dgv_ventas.RowTemplate.Height = 25
+        Me.dgv_ventas.Size = New System.Drawing.Size(841, 463)
+        Me.dgv_ventas.TabIndex = 9
         '
-        'DataGridView1
+        'btn_Export
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(150, 142)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(739, 463)
-        Me.DataGridView1.TabIndex = 9
+        Me.btn_Export.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.btn_Export.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.excel
+        Me.btn_Export.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_Export.FlatAppearance.BorderSize = 0
+        Me.btn_Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_Export.Location = New System.Drawing.Point(10, 192)
+        Me.btn_Export.Name = "btn_Export"
+        Me.btn_Export.Size = New System.Drawing.Size(50, 46)
+        Me.btn_Export.TabIndex = 31
+        Me.btn_Export.UseVisualStyleBackColor = False
+        '
+        'txb_buscar
+        '
+        Me.txb_buscar.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.txb_buscar.Location = New System.Drawing.Point(91, 111)
+        Me.txb_buscar.Name = "txb_buscar"
+        Me.txb_buscar.Size = New System.Drawing.Size(254, 25)
+        Me.txb_buscar.TabIndex = 30
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label3.Location = New System.Drawing.Point(91, 83)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(68, 25)
+        Me.Label3.TabIndex = 29
+        Me.Label3.Text = "Buscar"
         '
         'ListadoVentas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 15!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.btn_Export)
+        Me.Controls.Add(Me.txb_buscar)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.dgv_ventas)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "ListadoVentas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ventas"
         Me.Panel2.ResumeLayout(false)
         Me.Panel2.PerformLayout
-        CType(Me.DataGridView1,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.dgv_ventas,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -121,7 +146,9 @@ End Sub
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents Label10 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv_ventas As DataGridView
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents btn_Export As Button
+    Friend WithEvents txb_buscar As TextBox
+    Friend WithEvents Label3 As Label
 End Class

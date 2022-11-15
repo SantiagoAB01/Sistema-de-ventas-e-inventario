@@ -1,11 +1,12 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing.Text
 Imports System.Runtime.InteropServices.ComTypes
 Imports ClosedXML.Excel.XLPredefinedFormat
 Imports Microsoft.SqlServer.Server
 
 Public Class MetodoTrabajador
 
-    Public Shared Id_Trabajador As String
+    Public Shared Id_Trabajador As String = ""
 
     Public Shared Function ValidarTrabajador(cedula As String) As String
         Using CN As New SqlConnection(My.Settings.Conexion)
@@ -59,4 +60,26 @@ Public Class MetodoTrabajador
         End Using
 
     End Function
+    Public Shared Function ObtenerID_trabajador(cedula As String) As String
+        Dim DA As SqlDataReader
+
+        Using CN As New SqlConnection(My.Settings.Conexion)
+            Using CMD As New SqlCommand("SELECT Trabajador.id_trabajador from Trabajador where Trabajador.cedula= '" & cedula & "'", CN)
+
+                CN.Open()
+                DA = CMD.ExecuteReader()
+                DA.Read()
+                Id_Trabajador = DA.GetValue(0).ToString
+
+                DA.Close()
+
+
+            End Using
+
+
+        End Using
+
+    End Function
+
+
 End Class

@@ -222,3 +222,56 @@ exec MostrarLineaPedido 6
 
 select*from Venta
 select*from LineaPedido
+
+
+USE [Venta_Inventario]
+
+
+
+select*from Venta
+select*from LineaPedido
+
+
+alter table LineaPedido
+alter column subtotal decimal
+alter table LineaPedido
+alter column impuesto decimal
+alter table LineaPedido
+alter column precio_unitario decimal
+
+alter Procedure CrearVenta
+@id_ingreso int,
+@id_trabajador int, 
+@id_cliente int,
+@id_producto int, 
+@descripcion varchar(256),
+@precio_unitario Decimal,
+@cantidad int,
+@fecha date,
+@itbms Decimal, 
+@sub_total Decimal,
+@venta_total Decimal
+
+as
+if @cantidad > (Select Ingreso.stock_actual from Ingreso where Ingreso.id_producto = @id_producto)
+begin 
+	SELECT 'ERROR'
+end 
+else
+BEGIN
+	update Ingreso set Ingreso.stock_actual = Ingreso.stock_actual-@cantidad
+	insert into Venta ([id_cliente],[id_trabajador],[id_ingreso],[Total_Venta],[Fecha]) 
+values (@id_cliente, @id_trabajador, @id_ingreso, @venta_total, @fecha)
+
+declare @id_venta int	
+set @id_venta= (select max(Venta.id_venta) from Venta)
+
+insert into LineaPedido ([id_producto],[id_venta],[precio_unitario],[descripcion],[cantidad],[impuesto],[subtotal]) 
+values(@id_producto, @id_venta, @precio_unitario, @descripcion, @cantidad, @itbms, @sub_total)
+end 
+
+
+go
+
+select*from Producto
+select max(Producto.id_producto) from Producto

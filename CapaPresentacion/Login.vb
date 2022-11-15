@@ -219,6 +219,7 @@ Public Class Login
 
         If CapaDatos.MetodoTrabajador.ValidarLogin(txb_cedula.Text, txb_password.Text) Then
             Inicio.Show()
+            CapaDatos.MetodoTrabajador.ObtenerID_trabajador(txb_cedula.Text)
             Me.Hide()
         Else
             MsgBox("Email o contraseña incorrectos!")

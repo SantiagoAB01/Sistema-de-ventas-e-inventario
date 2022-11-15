@@ -45,9 +45,11 @@ Partial Class CrearVentas
         Me.txb_descripcion = New System.Windows.Forms.TextBox()
         Me.dgv_lineaPedidos = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.id_Trabajador = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cliente_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Producto_id = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.precio_unitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -296,12 +298,15 @@ Partial Class CrearVentas
         '
         'dgv_lineaPedidos
         '
+        Me.dgv_lineaPedidos.AllowUserToAddRows = False
+        Me.dgv_lineaPedidos.AllowUserToDeleteRows = False
         Me.dgv_lineaPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_lineaPedidos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.cliente_id, Me.Producto_id, Me.DataGridViewTextBoxColumn2, Me.cantidad, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.sub_total, Me.total_venta})
-        Me.dgv_lineaPedidos.Location = New System.Drawing.Point(12, 436)
+        Me.dgv_lineaPedidos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.id_Trabajador, Me.cliente_id, Me.Producto_id, Me.DataGridViewTextBoxColumn2, Me.precio_unitario, Me.cantidad, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.sub_total, Me.total_venta})
+        Me.dgv_lineaPedidos.Location = New System.Drawing.Point(0, 436)
         Me.dgv_lineaPedidos.Name = "dgv_lineaPedidos"
+        Me.dgv_lineaPedidos.ReadOnly = True
         Me.dgv_lineaPedidos.RowTemplate.Height = 25
-        Me.dgv_lineaPedidos.Size = New System.Drawing.Size(1040, 218)
+        Me.dgv_lineaPedidos.Size = New System.Drawing.Size(1064, 218)
         Me.dgv_lineaPedidos.TabIndex = 10
         Me.dgv_lineaPedidos.Visible = False
         '
@@ -309,46 +314,67 @@ Partial Class CrearVentas
         '
         Me.DataGridViewTextBoxColumn1.HeaderText = "Ingreso ID"
         Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        '
+        'id_Trabajador
+        '
+        Me.id_Trabajador.HeaderText = "Trabajador ID"
+        Me.id_Trabajador.Name = "id_Trabajador"
+        Me.id_Trabajador.ReadOnly = True
         '
         'cliente_id
         '
         Me.cliente_id.HeaderText = "Cliente ID"
         Me.cliente_id.Name = "cliente_id"
+        Me.cliente_id.ReadOnly = True
         '
         'Producto_id
         '
         Me.Producto_id.HeaderText = "Producto ID"
         Me.Producto_id.Name = "Producto_id"
+        Me.Producto_id.ReadOnly = True
         '
         'DataGridViewTextBoxColumn2
         '
         Me.DataGridViewTextBoxColumn2.HeaderText = "Descripcion"
         Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'precio_unitario
+        '
+        Me.precio_unitario.HeaderText = "Precio Unitario"
+        Me.precio_unitario.Name = "precio_unitario"
+        Me.precio_unitario.ReadOnly = True
         '
         'cantidad
         '
         Me.cantidad.HeaderText = "Cantidad"
         Me.cantidad.Name = "cantidad"
+        Me.cantidad.ReadOnly = True
         '
         'DataGridViewTextBoxColumn3
         '
         Me.DataGridViewTextBoxColumn3.HeaderText = "fecha"
         Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.ReadOnly = True
         '
         'DataGridViewTextBoxColumn4
         '
         Me.DataGridViewTextBoxColumn4.HeaderText = "ITBMS"
         Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
         '
         'sub_total
         '
         Me.sub_total.HeaderText = "SUB TOTAL"
         Me.sub_total.Name = "sub_total"
+        Me.sub_total.ReadOnly = True
         '
         'total_venta
         '
         Me.total_venta.HeaderText = "VENTA TOTAL"
         Me.total_venta.Name = "total_venta"
+        Me.total_venta.ReadOnly = True
         '
         'lbl_linea
         '
@@ -415,10 +441,10 @@ Partial Class CrearVentas
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftLong
         Me.IconButton1.IconColor = System.Drawing.Color.White
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(12, 3)
+        Me.IconButton1.Location = New System.Drawing.Point(13, 3)
         Me.IconButton1.Name = "IconButton1"
         Me.IconButton1.Size = New System.Drawing.Size(50, 39)
-        Me.IconButton1.TabIndex = 4
+        Me.IconButton1.TabIndex = 26
         Me.IconButton1.UseVisualStyleBackColor = False
         '
         'Button3
@@ -496,15 +522,6 @@ Partial Class CrearVentas
     Friend WithEvents btn_cancelar As Button
     Friend WithEvents dgv_lineaPedidos As DataGridView
     Friend WithEvents lbl_linea As Label
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents cliente_id As DataGridViewTextBoxColumn
-    Friend WithEvents Producto_id As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents cantidad As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents sub_total As DataGridViewTextBoxColumn
-    Friend WithEvents total_venta As DataGridViewTextBoxColumn
     Friend WithEvents id_ingreso As DataGridViewTextBoxColumn
     Friend WithEvents cliente As DataGridViewTextBoxColumn
     Friend WithEvents producto As DataGridViewTextBoxColumn
@@ -512,6 +529,17 @@ Partial Class CrearVentas
     Friend WithEvents fecha As DataGridViewTextBoxColumn
     Friend WithEvents ITBMS As DataGridViewTextBoxColumn
     Friend WithEvents SubTotal As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents id_Trabajador As DataGridViewTextBoxColumn
+    Friend WithEvents cliente_id As DataGridViewTextBoxColumn
+    Friend WithEvents Producto_id As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents precio_unitario As DataGridViewTextBoxColumn
+    Friend WithEvents cantidad As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents sub_total As DataGridViewTextBoxColumn
+    Friend WithEvents total_venta As DataGridViewTextBoxColumn
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button3 As Button
     Friend WithEvents Label10 As Label
