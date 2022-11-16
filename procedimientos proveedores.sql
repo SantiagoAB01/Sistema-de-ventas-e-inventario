@@ -275,3 +275,13 @@ go
 
 select*from Producto
 select max(Producto.id_producto) from Producto
+
+
+create procedure LISTA_VENTAS
+as
+	select Venta.id_venta[ID Venta], Venta.id_cliente[ID Cliente], Cliente.nombre[Nombre Cliente], 
+    Venta.id_trabajador[ID Trabajador], Trabajador.nombre[Nombre Trabajador], Venta.Total_Venta[VENTA TOTAL],
+	Venta.Fecha FROM Venta INNER JOIN Cliente ON Cliente.id_cliente = Venta.id_cliente INNER JOIN 
+	Trabajador ON Trabajador.id_trabajador = Venta.id_trabajador
+go
+exec LISTA_VENTAS
