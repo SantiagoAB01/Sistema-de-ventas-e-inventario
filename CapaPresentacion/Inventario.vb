@@ -49,7 +49,7 @@ Public Class Inventario
         dgv_inventario.Width = 514
         btn_eliminar.Visible = False
         btn_Agregar.Visible = True
-        Panel_Registro.BackColor = ColorTranslator.FromHtml("#BCDDB")
+        Panel_Registro.BackColor = ColorTranslator.FromHtml("#BFCDDB")
         lbl_stockActual.Visible = False
         btn_actualizar.Visible = False
 

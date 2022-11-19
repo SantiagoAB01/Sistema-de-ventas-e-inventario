@@ -42,6 +42,8 @@ Partial Class InfoProducto
         Me.txb_preciocompra = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txb_precioventa = New System.Windows.Forms.TextBox()
+        Me.cbx_Proveedores = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.img_codigo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -237,13 +239,33 @@ Partial Class InfoProducto
         Me.txb_precioventa.Size = New System.Drawing.Size(90, 23)
         Me.txb_precioventa.TabIndex = 49
         '
+        'cbx_Proveedores
+        '
+        Me.cbx_Proveedores.FormattingEnabled = True
+        Me.cbx_Proveedores.Location = New System.Drawing.Point(32, 438)
+        Me.cbx_Proveedores.Name = "cbx_Proveedores"
+        Me.cbx_Proveedores.Size = New System.Drawing.Size(226, 23)
+        Me.cbx_Proveedores.TabIndex = 54
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(32, 411)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(107, 19)
+        Me.Label8.TabIndex = 53
+        Me.Label8.Text = "Proveedores : "
+        '
         'InfoProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.ClientSize = New System.Drawing.Size(580, 450)
+        Me.ClientSize = New System.Drawing.Size(580, 491)
         Me.ControlBox = False
+        Me.Controls.Add(Me.cbx_Proveedores)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txb_preciocompra)
         Me.Controls.Add(Me.Label6)
@@ -291,4 +313,6 @@ Partial Class InfoProducto
     Friend WithEvents txb_preciocompra As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txb_precioventa As TextBox
+    Friend WithEvents cbx_Proveedores As ComboBox
+    Friend WithEvents Label8 As Label
 End Class

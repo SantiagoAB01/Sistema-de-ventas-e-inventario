@@ -89,7 +89,7 @@
                     Convert.ToDecimal(dgv_lineaPedidos.Rows(i).Cells(5).Value),
                     (dgv_lineaPedidos.Rows(i).Cells(6).Value),
                     dgv_lineaPedidos.Rows(i).Cells(7).Value.ToString,
-                     Convert.ToDecimal(dgv_lineaPedidos.Rows(i).Cells(8).Value),
+                     dgv_lineaPedidos.Rows(i).Cells(8).Value.ToString,
                      Convert.ToDecimal(dgv_lineaPedidos.Rows(i).Cells(9).Value),
                      Convert.ToDecimal(dgv_lineaPedidos.Rows(i).Cells(10).Value)) Then
 

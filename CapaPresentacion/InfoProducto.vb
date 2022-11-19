@@ -6,7 +6,9 @@ Public Class InfoProducto
         cbx_categoria.DisplayMember = "nombre"
         cbx_categoria.ValueMember = "id_categoria"
         cbx_categoria.DataSource = CapaDatos.MetodosCategoria.ListarCategoriasProductos
-
+        cbx_Proveedores.DisplayMember = "nombre"
+        cbx_Proveedores.ValueMember = "id_proveedor"
+        cbx_Proveedores.DataSource = CapaDatos.MetodosProveedores.ListarProveedores
 
     End Sub
 
@@ -31,7 +33,7 @@ Public Class InfoProducto
 
             img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
             Dim PicByte As Byte() = picStream.ToArray
-            CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text))
+            CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text), CInt(cbx_Proveedores.SelectedValue.ToString))
         Catch ex As Exception
             MsgBox("Error : " & ex.ToString)
         End Try

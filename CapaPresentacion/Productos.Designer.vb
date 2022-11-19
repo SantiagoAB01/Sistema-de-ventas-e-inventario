@@ -47,6 +47,8 @@ Partial Class Productos
         Me.txb_precioventa = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txb_preciocompra = New System.Windows.Forms.TextBox()
+        Me.cbx_Proveedores = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.dgv_prouctos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -113,14 +115,14 @@ Partial Class Productos
         Me.txb_descripcion.Location = New System.Drawing.Point(31, 235)
         Me.txb_descripcion.Multiline = True
         Me.txb_descripcion.Name = "txb_descripcion"
-        Me.txb_descripcion.Size = New System.Drawing.Size(223, 86)
+        Me.txb_descripcion.Size = New System.Drawing.Size(223, 92)
         Me.txb_descripcion.TabIndex = 13
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(28, 405)
+        Me.Label4.Location = New System.Drawing.Point(31, 388)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(79, 19)
         Me.Label4.TabIndex = 16
@@ -129,7 +131,7 @@ Partial Class Productos
         'cbx_categoria
         '
         Me.cbx_categoria.FormattingEnabled = True
-        Me.cbx_categoria.Location = New System.Drawing.Point(28, 432)
+        Me.cbx_categoria.Location = New System.Drawing.Point(31, 415)
         Me.cbx_categoria.Name = "cbx_categoria"
         Me.cbx_categoria.Size = New System.Drawing.Size(226, 23)
         Me.cbx_categoria.TabIndex = 17
@@ -138,7 +140,7 @@ Partial Class Productos
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(28, 477)
+        Me.Label5.Location = New System.Drawing.Point(31, 507)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 19)
         Me.Label5.TabIndex = 19
@@ -147,7 +149,7 @@ Partial Class Productos
         'tbx_codigo
         '
         Me.tbx_codigo.Enabled = False
-        Me.tbx_codigo.Location = New System.Drawing.Point(28, 504)
+        Me.tbx_codigo.Location = New System.Drawing.Point(31, 534)
         Me.tbx_codigo.Name = "tbx_codigo"
         Me.tbx_codigo.Size = New System.Drawing.Size(115, 23)
         Me.tbx_codigo.TabIndex = 18
@@ -157,7 +159,7 @@ Partial Class Productos
         Me.btn_codigo.BackColor = System.Drawing.Color.SteelBlue
         Me.btn_codigo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.btn_codigo.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btn_codigo.Location = New System.Drawing.Point(146, 491)
+        Me.btn_codigo.Location = New System.Drawing.Point(149, 521)
         Me.btn_codigo.Name = "btn_codigo"
         Me.btn_codigo.Size = New System.Drawing.Size(108, 47)
         Me.btn_codigo.TabIndex = 20
@@ -199,7 +201,7 @@ Partial Class Productos
         '
         'btn_vercodigo
         '
-        Me.btn_vercodigo.Location = New System.Drawing.Point(46, 550)
+        Me.btn_vercodigo.Location = New System.Drawing.Point(49, 580)
         Me.btn_vercodigo.Name = "btn_vercodigo"
         Me.btn_vercodigo.Size = New System.Drawing.Size(75, 23)
         Me.btn_vercodigo.TabIndex = 24
@@ -294,11 +296,31 @@ Partial Class Productos
         Me.txb_preciocompra.Size = New System.Drawing.Size(90, 23)
         Me.txb_preciocompra.TabIndex = 33
         '
+        'cbx_Proveedores
+        '
+        Me.cbx_Proveedores.FormattingEnabled = True
+        Me.cbx_Proveedores.Location = New System.Drawing.Point(31, 475)
+        Me.cbx_Proveedores.Name = "cbx_Proveedores"
+        Me.cbx_Proveedores.Size = New System.Drawing.Size(226, 23)
+        Me.cbx_Proveedores.TabIndex = 36
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.Location = New System.Drawing.Point(31, 448)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(96, 19)
+        Me.Label8.TabIndex = 35
+        Me.Label8.Text = "Proveedores : "
+        '
         'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.cbx_Proveedores)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txb_preciocompra)
         Me.Controls.Add(Me.Label6)
@@ -356,4 +378,6 @@ Partial Class Productos
     Friend WithEvents txb_precioventa As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txb_preciocompra As TextBox
+    Friend WithEvents cbx_Proveedores As ComboBox
+    Friend WithEvents Label8 As Label
 End Class

@@ -19,6 +19,10 @@ Public Class Productos
         cbx_categoria.ValueMember = "id_categoria"
         cbx_categoria.DataSource = CapaDatos.MetodosCategoria.ListarCategoriasProductos
 
+        cbx_Proveedores.DisplayMember = "nombre"
+        cbx_Proveedores.ValueMember = "id_proveedor"
+        cbx_Proveedores.DataSource = CapaDatos.MetodosProveedores.ListarProveedores
+
     End Sub
 
     Private Sub btn_codigo_Click(sender As Object, e As EventArgs) Handles btn_codigo.Click
@@ -52,7 +56,7 @@ Public Class Productos
         VistaCodigo.img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
         Dim PicByte As Byte() = picStream.ToArray
 
-        CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text))
+        CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text), cbx_Proveedores.SelectedValue)
         MsgBox("Registro Exitoso!")
     End Sub
 
@@ -89,6 +93,7 @@ Public Class Productos
         InfoProducto.cbx_categoria.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(4).Value.ToString
         InfoProducto.txb_precioventa.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(5).Value.ToString
         InfoProducto.txb_preciocompra.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(6).Value.ToString
+        InfoProducto.cbx_Proveedores.Text = dgv_prouctos.Rows(dgv_prouctos.CurrentRow.Index).Cells(7).Value.ToString
 
         Dim bm As Bitmap = Nothing
         bm = Codigo.codigo128("A" & InfoProducto.tbx_codigo.Text & "B", 70)

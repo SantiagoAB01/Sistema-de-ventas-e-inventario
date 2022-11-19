@@ -35,6 +35,8 @@ Partial Class Inicio
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label5
@@ -176,12 +178,37 @@ Partial Class Inicio
         Me.Label7.TabIndex = 25
         Me.Label7.Text = "Mis Clientes"
         '
+        'Button6
+        '
+        Me.Button6.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.inventario
+        Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Location = New System.Drawing.Point(514, 366)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(165, 165)
+        Me.Button6.TabIndex = 28
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label6.Location = New System.Drawing.Point(540, 556)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(127, 30)
+        Me.Label6.TabIndex = 27
+        Me.Label6.Text = "Proveedores"
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button7)
@@ -214,4 +241,6 @@ End Sub
     Friend WithEvents Button2 As Button
     Friend WithEvents Label7 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Label6 As Label
 End Class
