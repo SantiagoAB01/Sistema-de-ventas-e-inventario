@@ -15,6 +15,10 @@
         cbx_sexo.Text = ""
         dat_fecha.Text = ""
         Clientes.dgv_clientes.Refresh()
+        Clientes.dgv_clientes.DataSource = CapaDatos.MetodosClientes.listarClientes
+    End Sub
+
+    Private Sub AgregarCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

@@ -37,6 +37,11 @@ Partial Class Inicio
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.CreditosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label5
@@ -201,12 +206,53 @@ Partial Class Inicio
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "Proveedores"
         '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.White
+        Me.Button8.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.cliente
+        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Location = New System.Drawing.Point(729, 365)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(165, 165)
+        Me.Button8.TabIndex = 30
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.Window
+        Me.Label8.Location = New System.Drawing.Point(755, 555)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(135, 30)
+        Me.Label8.TabIndex = 29
+        Me.Label8.Text = "Cerrar Sesión"
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreditosToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1064, 24)
+        Me.MenuStrip1.TabIndex = 31
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'CreditosToolStripMenuItem
+        '
+        Me.CreditosToolStripMenuItem.Name = "CreditosToolStripMenuItem"
+        Me.CreditosToolStripMenuItem.Size = New System.Drawing.Size(63, 20)
+        Me.CreditosToolStripMenuItem.Text = "Creditos"
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.Button8)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
@@ -221,10 +267,14 @@ Partial Class Inicio
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Menú de inicio"
-        Me.ResumeLayout(false)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        Me.ResumeLayout(False)
         Me.PerformLayout
 
 End Sub
@@ -243,4 +293,8 @@ End Sub
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents Button6 As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents CreditosToolStripMenuItem As ToolStripMenuItem
 End Class

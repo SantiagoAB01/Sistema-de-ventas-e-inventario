@@ -143,7 +143,7 @@ Partial Class InfoProducto
         '
         'img_codigo
         '
-        Me.img_codigo.Location = New System.Drawing.Point(349, 204)
+        Me.img_codigo.Location = New System.Drawing.Point(368, 213)
         Me.img_codigo.Name = "img_codigo"
         Me.img_codigo.Size = New System.Drawing.Size(182, 119)
         Me.img_codigo.TabIndex = 36

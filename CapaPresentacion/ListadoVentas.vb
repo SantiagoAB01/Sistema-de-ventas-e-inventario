@@ -3,7 +3,7 @@
 Public Class ListadoVentas
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Inicio.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub ListadoVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load

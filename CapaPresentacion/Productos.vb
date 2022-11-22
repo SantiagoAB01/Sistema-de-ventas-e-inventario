@@ -23,6 +23,7 @@ Public Class Productos
         cbx_Proveedores.ValueMember = "id_proveedor"
         cbx_Proveedores.DataSource = CapaDatos.MetodosProveedores.ListarProveedores
 
+
     End Sub
 
     Private Sub btn_codigo_Click(sender As Object, e As EventArgs) Handles btn_codigo.Click
@@ -56,8 +57,9 @@ Public Class Productos
         VistaCodigo.img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
         Dim PicByte As Byte() = picStream.ToArray
 
-        CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text), cbx_Proveedores.SelectedValue)
+        CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDecimal(txb_preciocompra.Text), Convert.ToDecimal(txb_precioventa.Text), cbx_Proveedores.SelectedValue)
         MsgBox("Registro Exitoso!")
+        dgv_prouctos.DataSource = CapaDatos.MetodoProductos.listarProductos
     End Sub
 
     Private Sub btn_vercodigo_Click(sender As Object, e As EventArgs) Handles btn_vercodigo.Click
@@ -104,6 +106,11 @@ Public Class Productos
     End Sub
     Private Sub IconButton1_Click_1(sender As Object, e As EventArgs) Handles IconButton1.Click
         Inicio.Show()
-        Me.Hide()
+        Me.Close()
+    End Sub
+
+    Private Sub cbx_Proveedores_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_Proveedores.SelectedIndexChanged
+        Label9.Text = cbx_Proveedores.SelectedValue.ToString
+
     End Sub
 End Class

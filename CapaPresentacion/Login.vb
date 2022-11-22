@@ -222,7 +222,7 @@ Public Class Login
             CapaDatos.MetodoTrabajador.ObtenerID_trabajador(txb_cedula.Text)
             Me.Hide()
         Else
-            MsgBox("Email o contraseña incorrectos!")
+            MsgBox("Datos Ingresado Incorrectos o el usuario no existe")
         End If
 
 

@@ -124,7 +124,7 @@ Partial Class Inventario
         Me.Panel_Registro.Controls.Add(Me.dgv_productos)
         Me.Panel_Registro.Controls.Add(Me.btn_Cancelar)
         Me.Panel_Registro.Controls.Add(Me.btn_Agregar)
-        Me.Panel_Registro.Location = New System.Drawing.Point(562, 63)
+        Me.Panel_Registro.Location = New System.Drawing.Point(562, 51)
         Me.Panel_Registro.Name = "Panel_Registro"
         Me.Panel_Registro.Size = New System.Drawing.Size(490, 606)
         Me.Panel_Registro.TabIndex = 29

@@ -169,7 +169,7 @@ Partial Class Proveedores
         Me.Panel_Registro.Controls.Add(Me.txb_nombre)
         Me.Panel_Registro.Controls.Add(Me.btn_Cancelar)
         Me.Panel_Registro.Controls.Add(Me.btn_Agregar)
-        Me.Panel_Registro.Location = New System.Drawing.Point(562, 142)
+        Me.Panel_Registro.Location = New System.Drawing.Point(562, 82)
         Me.Panel_Registro.Name = "Panel_Registro"
         Me.Panel_Registro.Size = New System.Drawing.Size(490, 511)
         Me.Panel_Registro.TabIndex = 36
@@ -180,7 +180,7 @@ Partial Class Proveedores
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.Color.Black
-        Me.Label7.Location = New System.Drawing.Point(277, 238)
+        Me.Label7.Location = New System.Drawing.Point(277, 233)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(86, 15)
         Me.Label7.TabIndex = 81
@@ -198,7 +198,7 @@ Partial Class Proveedores
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(277, 161)
+        Me.Label6.Location = New System.Drawing.Point(277, 156)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(41, 15)
         Me.Label6.TabIndex = 79
@@ -216,7 +216,7 @@ Partial Class Proveedores
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.Color.Black
-        Me.Label5.Location = New System.Drawing.Point(275, 92)
+        Me.Label5.Location = New System.Drawing.Point(275, 87)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 15)
         Me.Label5.TabIndex = 77
@@ -234,7 +234,7 @@ Partial Class Proveedores
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(31, 314)
+        Me.Label4.Location = New System.Drawing.Point(31, 309)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 15)
         Me.Label4.TabIndex = 75
@@ -252,7 +252,7 @@ Partial Class Proveedores
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(31, 238)
+        Me.Label3.Location = New System.Drawing.Point(31, 233)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(122, 15)
         Me.Label3.TabIndex = 73
@@ -270,7 +270,7 @@ Partial Class Proveedores
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(29, 161)
+        Me.Label1.Location = New System.Drawing.Point(29, 156)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(102, 15)
         Me.Label1.TabIndex = 71
@@ -334,11 +334,11 @@ Partial Class Proveedores
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(29, 92)
+        Me.Label8.Location = New System.Drawing.Point(29, 87)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(107, 15)
+        Me.Label8.Size = New System.Drawing.Size(115, 15)
         Me.Label8.TabIndex = 57
-        Me.Label8.Text = "Nombre Producto"
+        Me.Label8.Text = "Nombre Proveedor"
         '
         'txb_nombre
         '

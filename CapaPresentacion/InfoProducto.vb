@@ -6,14 +6,17 @@ Public Class InfoProducto
         cbx_categoria.DisplayMember = "nombre"
         cbx_categoria.ValueMember = "id_categoria"
         cbx_categoria.DataSource = CapaDatos.MetodosCategoria.ListarCategoriasProductos
+
+
         cbx_Proveedores.DisplayMember = "nombre"
         cbx_Proveedores.ValueMember = "id_proveedor"
         cbx_Proveedores.DataSource = CapaDatos.MetodosProveedores.ListarProveedores
 
+
     End Sub
 
     Private Sub btn_Eliminar_Click(sender As Object, e As EventArgs) Handles btn_Eliminar.Click
-        If MsgBox("Esta Seguro de Eliminar este Producto ? " & txb_id.Text) Then
+        If MessageBox.Show("¿Esta Seguro que desea Eliminar el registro?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = 6 Then
             Try
                 CapaDatos.MetodoProductos.EliminarProducto(CInt(txb_id.Text))
 
@@ -21,7 +24,10 @@ Public Class InfoProducto
                 MsgBox("Error : " & ex.ToString)
             End Try
             MsgBox("El Producto se ha Eliminado!")
+            Productos.dgv_prouctos.DataSource = CapaDatos.MetodoProductos.listarProductos
+
         Else
+            MsgBox("Ha cancelado la Operacion!")
 
         End If
     End Sub
@@ -33,11 +39,13 @@ Public Class InfoProducto
 
             img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
             Dim PicByte As Byte() = picStream.ToArray
-            CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDouble(txb_preciocompra.Text), Convert.ToDouble(txb_precioventa.Text), CInt(cbx_Proveedores.SelectedValue.ToString))
+            CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDecimal(txb_precioventa.Text), Convert.ToDecimal(txb_preciocompra.Text), CInt(cbx_Proveedores.SelectedValue.ToString))
         Catch ex As Exception
             MsgBox("Error : " & ex.ToString)
         End Try
         MsgBox("Actualizacion Exitosa!")
+        Productos.dgv_prouctos.DataSource = CapaDatos.MetodoProductos.listarProductos
+
     End Sub
 
     Private Sub btn_codigo_Click(sender As Object, e As EventArgs) Handles btn_codigo.Click

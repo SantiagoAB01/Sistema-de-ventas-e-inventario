@@ -49,6 +49,7 @@ Partial Class Productos
         Me.txb_preciocompra = New System.Windows.Forms.TextBox()
         Me.cbx_Proveedores = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.dgv_prouctos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -314,11 +315,21 @@ Partial Class Productos
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "Proveedores : "
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(202, 578)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(41, 15)
+        Me.Label9.TabIndex = 37
+        Me.Label9.Text = "Label9"
+        '
         'Productos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1064, 681)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cbx_Proveedores)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -380,4 +391,5 @@ Partial Class Productos
     Friend WithEvents txb_preciocompra As TextBox
     Friend WithEvents cbx_Proveedores As ComboBox
     Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
 End Class

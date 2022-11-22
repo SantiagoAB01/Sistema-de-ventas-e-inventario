@@ -46,7 +46,7 @@ Public Class Inventario
     Private Sub btn_new_Click(sender As Object, e As EventArgs) Handles btn_new.Click
         Panel_Registro.Visible = True
         lbl_titulo.Text = "Nuevo"
-        dgv_inventario.Width = 514
+        dgv_inventario.Width = 454
         btn_eliminar.Visible = False
         btn_Agregar.Visible = True
         Panel_Registro.BackColor = ColorTranslator.FromHtml("#BFCDDB")
@@ -133,6 +133,8 @@ Public Class Inventario
 
             Else
                 MsgBox("Actualizacion Exitosa!")
+                dgv_inventario.DataSource = CapaDatos.MetodosIngreso.Listar_Inventario
+                dgv_productos.DataSource = CapaDatos.MetodoProductos.listarProductos
             End If
 
         Else
@@ -149,6 +151,8 @@ Public Class Inventario
             End Try
 
             MsgBox("Ha Eliminado el registro")
+            dgv_inventario.DataSource = CapaDatos.MetodosIngreso.Listar_Inventario
+            dgv_productos.DataSource = CapaDatos.MetodoProductos.listarProductos
         Else
             MsgBox("Ha cancelado La operación")
         End If

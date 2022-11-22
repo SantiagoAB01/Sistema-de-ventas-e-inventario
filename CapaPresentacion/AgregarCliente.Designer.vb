@@ -45,7 +45,7 @@ Partial Class AgregarCliente
         'txb_nombre
         '
         Me.txb_nombre.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txb_nombre.Location = New System.Drawing.Point(197, 64)
+        Me.txb_nombre.Location = New System.Drawing.Point(54, 69)
         Me.txb_nombre.Name = "txb_nombre"
         Me.txb_nombre.Size = New System.Drawing.Size(166, 23)
         Me.txb_nombre.TabIndex = 0
@@ -55,7 +55,7 @@ Partial Class AgregarCliente
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label1.Location = New System.Drawing.Point(199, 32)
+        Me.Label1.Location = New System.Drawing.Point(56, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(78, 25)
         Me.Label1.TabIndex = 1
@@ -66,7 +66,7 @@ Partial Class AgregarCliente
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label2.Location = New System.Drawing.Point(199, 95)
+        Me.Label2.Location = New System.Drawing.Point(56, 100)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(78, 25)
         Me.Label2.TabIndex = 3
@@ -75,7 +75,7 @@ Partial Class AgregarCliente
         'txb_apellido
         '
         Me.txb_apellido.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txb_apellido.Location = New System.Drawing.Point(195, 126)
+        Me.txb_apellido.Location = New System.Drawing.Point(52, 131)
         Me.txb_apellido.Name = "txb_apellido"
         Me.txb_apellido.Size = New System.Drawing.Size(166, 23)
         Me.txb_apellido.TabIndex = 2
@@ -85,7 +85,7 @@ Partial Class AgregarCliente
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label3.Location = New System.Drawing.Point(200, 150)
+        Me.Label3.Location = New System.Drawing.Point(57, 155)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(66, 25)
         Me.Label3.TabIndex = 5
@@ -94,7 +94,7 @@ Partial Class AgregarCliente
         'txb_cedula
         '
         Me.txb_cedula.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txb_cedula.Location = New System.Drawing.Point(196, 180)
+        Me.txb_cedula.Location = New System.Drawing.Point(53, 185)
         Me.txb_cedula.Name = "txb_cedula"
         Me.txb_cedula.Size = New System.Drawing.Size(166, 23)
         Me.txb_cedula.TabIndex = 4
@@ -104,7 +104,7 @@ Partial Class AgregarCliente
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label4.Location = New System.Drawing.Point(198, 204)
+        Me.Label4.Location = New System.Drawing.Point(55, 209)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(85, 25)
         Me.Label4.TabIndex = 7
@@ -113,7 +113,7 @@ Partial Class AgregarCliente
         'txb_direccion
         '
         Me.txb_direccion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txb_direccion.Location = New System.Drawing.Point(195, 235)
+        Me.txb_direccion.Location = New System.Drawing.Point(52, 240)
         Me.txb_direccion.Name = "txb_direccion"
         Me.txb_direccion.Size = New System.Drawing.Size(166, 23)
         Me.txb_direccion.TabIndex = 6
@@ -123,7 +123,7 @@ Partial Class AgregarCliente
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label5.Location = New System.Drawing.Point(199, 259)
+        Me.Label5.Location = New System.Drawing.Point(56, 264)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(61, 25)
         Me.Label5.TabIndex = 9
@@ -132,7 +132,7 @@ Partial Class AgregarCliente
         'txb_email
         '
         Me.txb_email.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txb_email.Location = New System.Drawing.Point(194, 288)
+        Me.txb_email.Location = New System.Drawing.Point(51, 293)
         Me.txb_email.Name = "txb_email"
         Me.txb_email.Size = New System.Drawing.Size(166, 23)
         Me.txb_email.TabIndex = 8
@@ -142,7 +142,7 @@ Partial Class AgregarCliente
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label6.Location = New System.Drawing.Point(198, 314)
+        Me.Label6.Location = New System.Drawing.Point(55, 319)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(79, 25)
         Me.Label6.TabIndex = 11
@@ -151,14 +151,14 @@ Partial Class AgregarCliente
         'txb_telefono
         '
         Me.txb_telefono.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txb_telefono.Location = New System.Drawing.Point(194, 345)
+        Me.txb_telefono.Location = New System.Drawing.Point(51, 350)
         Me.txb_telefono.Name = "txb_telefono"
         Me.txb_telefono.Size = New System.Drawing.Size(166, 23)
         Me.txb_telefono.TabIndex = 10
         '
         'dat_fecha
         '
-        Me.dat_fecha.Location = New System.Drawing.Point(407, 63)
+        Me.dat_fecha.Location = New System.Drawing.Point(264, 68)
         Me.dat_fecha.Name = "dat_fecha"
         Me.dat_fecha.Size = New System.Drawing.Size(200, 23)
         Me.dat_fecha.TabIndex = 12
@@ -168,7 +168,7 @@ Partial Class AgregarCliente
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label7.Location = New System.Drawing.Point(409, 32)
+        Me.Label7.Location = New System.Drawing.Point(266, 37)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(177, 25)
         Me.Label7.TabIndex = 13
@@ -178,7 +178,7 @@ Partial Class AgregarCliente
         '
         Me.cbx_sexo.FormattingEnabled = True
         Me.cbx_sexo.Items.AddRange(New Object() {"F", "M"})
-        Me.cbx_sexo.Location = New System.Drawing.Point(408, 126)
+        Me.cbx_sexo.Location = New System.Drawing.Point(265, 131)
         Me.cbx_sexo.Name = "cbx_sexo"
         Me.cbx_sexo.Size = New System.Drawing.Size(121, 23)
         Me.cbx_sexo.TabIndex = 14
@@ -188,7 +188,7 @@ Partial Class AgregarCliente
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label8.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Label8.Location = New System.Drawing.Point(410, 98)
+        Me.Label8.Location = New System.Drawing.Point(267, 103)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(50, 25)
         Me.Label8.TabIndex = 15
@@ -200,7 +200,7 @@ Partial Class AgregarCliente
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Button2.ForeColor = System.Drawing.SystemColors.Window
-        Me.Button2.Location = New System.Drawing.Point(663, 398)
+        Me.Button2.Location = New System.Drawing.Point(369, 398)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(125, 40)
         Me.Button2.TabIndex = 16
@@ -213,7 +213,7 @@ Partial Class AgregarCliente
         Me.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_cancelar.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_cancelar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btn_cancelar.Location = New System.Drawing.Point(510, 398)
+        Me.btn_cancelar.Location = New System.Drawing.Point(216, 398)
         Me.btn_cancelar.Name = "btn_cancelar"
         Me.btn_cancelar.Size = New System.Drawing.Size(125, 40)
         Me.btn_cancelar.TabIndex = 17
@@ -225,7 +225,7 @@ Partial Class AgregarCliente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.SteelBlue
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(508, 450)
         Me.Controls.Add(Me.btn_cancelar)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label8)

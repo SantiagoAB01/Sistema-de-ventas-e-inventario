@@ -5,7 +5,7 @@ Imports ClosedXML.Excel
 Public Class Reportes
     Private Sub IconButton1_Click(sender As Object, e As EventArgs) Handles IconButton1.Click
         Inicio.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_cliente.SelectedIndexChanged
