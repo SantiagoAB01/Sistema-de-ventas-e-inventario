@@ -113,7 +113,8 @@ Partial Class Inicio
         '
         'Button4
         '
-        Me.Button4.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.reporte
+        Me.Button4.BackColor = System.Drawing.SystemColors.Control
+        Me.Button4.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.reporte1
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.FlatAppearance.BorderSize = 0
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -121,11 +122,11 @@ Partial Class Inicio
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(165, 165)
         Me.Button4.TabIndex = 15
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.producto
+        Me.Button3.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.reporte
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.FlatAppearance.BorderSize = 0
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -185,7 +186,8 @@ Partial Class Inicio
         '
         'Button6
         '
-        Me.Button6.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.inventario
+        Me.Button6.BackColor = System.Drawing.SystemColors.Control
+        Me.Button6.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.proveedor
         Me.Button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -193,7 +195,7 @@ Partial Class Inicio
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(165, 165)
         Me.Button6.TabIndex = 28
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.Button6.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -209,7 +211,7 @@ Partial Class Inicio
         'Button8
         '
         Me.Button8.BackColor = System.Drawing.Color.White
-        Me.Button8.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.cliente
+        Me.Button8.BackgroundImage = Global.CapaPresentacion.My.Resources.Resources.cerrar_sesion
         Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button8.FlatAppearance.BorderSize = 0
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat

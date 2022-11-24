@@ -60,7 +60,7 @@ Public Class Inventario
     End Sub
 
     Private Sub btn_Cancelar_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
-        dgv_inventario.Width = 846
+        dgv_inventario.Width = 560
         Panel_Registro.Visible = False
     End Sub
 
@@ -80,18 +80,27 @@ Public Class Inventario
     End Sub
 
     Private Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
-        If MessageBox.Show("¿Esta Seguro de De realizar esta Accion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = 6 Then
+        If txb_id_Producto.Text <> "" And num_cantidad.Value <> 0 Then
+            Try
+                If MessageBox.Show("¿Esta Seguro de De realizar esta Accion?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = 6 Then
 
-            Dim fechaActual As Date = Date.Now
-            If CapaDatos.MetodosIngreso.RegistrarInventario(CInt(id_producto), fechaActual.ToShortDateString, CInt(num_cantidad.Value.ToString)) Then
-                MsgBox("Parece que ya esta registrado este producto en el inventario")
+                    Dim fechaActual As Date = Date.Now
+                    If CapaDatos.MetodosIngreso.RegistrarInventario(CInt(id_producto), fechaActual.ToShortDateString, CInt(num_cantidad.Value.ToString)) Then
+                        MsgBox("Parece que ya esta registrado este producto en el inventario")
 
-            Else
-                MsgBox("Registro Exitso!")
-            End If
+                    Else
+                        MsgBox("Registro Exitso!")
+                        dgv_inventario.DataSource = CapaDatos.MetodosIngreso.Listar_Inventario
+                        dgv_productos.DataSource = CapaDatos.MetodoProductos.listarProductos
+                    End If
 
-        Else
-            MsgBox("ha cancelado la operacion!")
+                Else
+                    MsgBox("ha cancelado la operacion!")
+                End If
+            Catch ex As Exception
+                MsgBox("Debe Seleccionar el Producto a registrar!")
+
+            End Try
         End If
     End Sub
 

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class creditos
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class creditos
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -178,10 +178,10 @@ Partial Class creditos
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeftLong
         Me.IconButton1.IconColor = System.Drawing.Color.White
         Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.Location = New System.Drawing.Point(8, 0)
+        Me.IconButton1.Location = New System.Drawing.Point(12, 3)
         Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(48, 40)
-        Me.IconButton1.TabIndex = 26
+        Me.IconButton1.Size = New System.Drawing.Size(50, 39)
+        Me.IconButton1.TabIndex = 4
         Me.IconButton1.UseVisualStyleBackColor = False
         '
         'Button3
@@ -203,9 +203,9 @@ Partial Class creditos
         Me.Label10.ForeColor = System.Drawing.SystemColors.Window
         Me.Label10.Location = New System.Drawing.Point(102, 9)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(140, 25)
+        Me.Label10.Size = New System.Drawing.Size(86, 25)
         Me.Label10.TabIndex = 0
-        Me.Label10.Text = "Generar Venta"
+        Me.Label10.Text = "Creditos"
         '
         'creditos
         '

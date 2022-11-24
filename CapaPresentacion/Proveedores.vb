@@ -41,7 +41,7 @@
     End Sub
 
     Private Sub btn_Cancelar_Click(sender As Object, e As EventArgs) Handles btn_Cancelar.Click
-        dgv_Proveedores.Width = 935
+        dgv_Proveedores.Width = 677
         Panel_Registro.Visible = False
     End Sub
 
@@ -51,19 +51,23 @@
 
     Private Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
 
-        Try
-            If CapaDatos.MetodosProveedores.InsertarProvedor(txb_nombre.Text, txb_sector.Text, txb_documento.Text, txb_direccion.Text, txb_telefono.Text, txb_email.Text, txb_url.Text) Then
-                MsgBox("Parece que este Proveedor esta Registrado")
-            Else
-                dgv_Proveedores.Refresh()
+        If txb_direccion.Text <> "" Then
+            Try
+                If CapaDatos.MetodosProveedores.InsertarProvedor(txb_nombre.Text, txb_sector.Text, txb_documento.Text, txb_direccion.Text, txb_telefono.Text, txb_email.Text, txb_url.Text) Then
+                    MsgBox("Parece que este Proveedor esta Registrado")
+                Else
+                    dgv_Proveedores.Refresh()
 
-                MsgBox("Provedor Registrado Correctamente!")
+                    MsgBox("Provedor Registrado Correctamente!")
 
-            End If
-        Catch ex As Exception
-            MsgBox("Error: " & ex.ToString)
-        End Try
-        dgv_Proveedores.DataSource = CapaDatos.MetodosProveedores.ListarProveedores
+                End If
+            Catch ex As Exception
+                MsgBox("Error: " & ex.ToString)
+            End Try
+            dgv_Proveedores.DataSource = CapaDatos.MetodosProveedores.ListarProveedores
+        Else
+            MsgBox("Campos Vacios!")
+        End If
 
     End Sub
 

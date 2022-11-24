@@ -51,15 +51,24 @@ Public Class Productos
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Try
 
-        Dim picStream As New MemoryStream
+            If txb_descripcion.Text <> "" And txb_nombre.Text <> "" And txb_preciocompra.Text <> "" And txb_precioventa.Text <> "" And tbx_codigo.Text <> "" Then
+                Dim picStream As New MemoryStream
 
-        VistaCodigo.img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
-        Dim PicByte As Byte() = picStream.ToArray
+                VistaCodigo.img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
+                Dim PicByte As Byte() = picStream.ToArray
 
-        CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDecimal(txb_preciocompra.Text), Convert.ToDecimal(txb_precioventa.Text), cbx_Proveedores.SelectedValue)
-        MsgBox("Registro Exitoso!")
-        dgv_prouctos.DataSource = CapaDatos.MetodoProductos.listarProductos
+                CapaDatos.MetodoProductos.InsertarProducto(cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDecimal(txb_precioventa.Text), Convert.ToDecimal(txb_preciocompra.Text), cbx_Proveedores.SelectedValue)
+                MsgBox("Registro Exitoso!")
+                dgv_prouctos.DataSource = CapaDatos.MetodoProductos.listarProductos
+            Else
+                MsgBox("Campos Vacios!")
+            End If
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     Private Sub btn_vercodigo_Click(sender As Object, e As EventArgs) Handles btn_vercodigo.Click
@@ -109,8 +118,5 @@ Public Class Productos
         Me.Close()
     End Sub
 
-    Private Sub cbx_Proveedores_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbx_Proveedores.SelectedIndexChanged
-        Label9.Text = cbx_Proveedores.SelectedValue.ToString
 
-    End Sub
 End Class

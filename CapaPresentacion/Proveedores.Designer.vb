@@ -119,7 +119,7 @@ Partial Class Proveedores
         Me.dgv_Proveedores.Name = "dgv_Proveedores"
         Me.dgv_Proveedores.ReadOnly = True
         Me.dgv_Proveedores.RowTemplate.Height = 25
-        Me.dgv_Proveedores.Size = New System.Drawing.Size(935, 434)
+        Me.dgv_Proveedores.Size = New System.Drawing.Size(844, 434)
         Me.dgv_Proveedores.TabIndex = 33
         '
         'Label2

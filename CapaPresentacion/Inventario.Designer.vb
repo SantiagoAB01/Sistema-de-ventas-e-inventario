@@ -79,7 +79,7 @@ Partial Class Inventario
         Me.dgv_inventario.Location = New System.Drawing.Point(102, 155)
         Me.dgv_inventario.Name = "dgv_inventario"
         Me.dgv_inventario.RowTemplate.Height = 25
-        Me.dgv_inventario.Size = New System.Drawing.Size(846, 420)
+        Me.dgv_inventario.Size = New System.Drawing.Size(560, 420)
         Me.dgv_inventario.TabIndex = 10
         '
         'btn_new
@@ -136,7 +136,7 @@ Partial Class Inventario
         Me.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_actualizar.Font = New System.Drawing.Font("Segoe UI", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btn_actualizar.ForeColor = System.Drawing.SystemColors.Window
-        Me.btn_actualizar.Location = New System.Drawing.Point(354, 553)
+        Me.btn_actualizar.Location = New System.Drawing.Point(356, 553)
         Me.btn_actualizar.Name = "btn_actualizar"
         Me.btn_actualizar.Size = New System.Drawing.Size(125, 40)
         Me.btn_actualizar.TabIndex = 69

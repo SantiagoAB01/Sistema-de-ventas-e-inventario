@@ -33,19 +33,22 @@ Public Class InfoProducto
     End Sub
 
     Private Sub btn_Actualizar_Click(sender As Object, e As EventArgs) Handles btn_Actualizar.Click
+        If txb_descripcion.Text <> "" And txb_nombre.Text <> "" And txb_preciocompra.Text <> "" And txb_precioventa.Text <> "" Then
 
-        Try
-            Dim picStream As New MemoryStream
+            Try
+                Dim picStream As New MemoryStream
 
-            img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
-            Dim PicByte As Byte() = picStream.ToArray
-            CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDecimal(txb_precioventa.Text), Convert.ToDecimal(txb_preciocompra.Text), CInt(cbx_Proveedores.SelectedValue.ToString))
-        Catch ex As Exception
-            MsgBox("Error : " & ex.ToString)
-        End Try
-        MsgBox("Actualizacion Exitosa!")
-        Productos.dgv_prouctos.DataSource = CapaDatos.MetodoProductos.listarProductos
-
+                img_codigo.Image.Save(picStream, ImageFormat.Jpeg)
+                Dim PicByte As Byte() = picStream.ToArray
+                CapaDatos.MetodoProductos.ActualizarProducto(CInt(txb_id.Text), cbx_categoria.SelectedValue, tbx_codigo.Text, txb_nombre.Text, txb_descripcion.Text, PicByte, Convert.ToDecimal(txb_precioventa.Text), Convert.ToDecimal(txb_preciocompra.Text), CInt(cbx_Proveedores.SelectedValue.ToString))
+            Catch ex As Exception
+                MsgBox("Error : " & ex.ToString)
+            End Try
+            MsgBox("Actualizacion Exitosa!")
+            Productos.dgv_prouctos.DataSource = CapaDatos.MetodoProductos.listarProductos
+        Else
+            MsgBox("Campos Vacios")
+        End If
     End Sub
 
     Private Sub btn_codigo_Click(sender As Object, e As EventArgs) Handles btn_codigo.Click
